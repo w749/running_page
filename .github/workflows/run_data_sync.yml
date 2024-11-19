@@ -205,7 +205,7 @@ jobs:
       - name: Run sync download joyrun to GPX
         if: env.RUN_TYPE == 'joyrun'
         run: |
-          python run_page/joyrun_sync.py ${{ secrets.PHONE }} ${{ secrets.CODE }} --with-gpx
+          python run_page/joyrun_sync.py ${{ secrets.JOYRUN_PHONE }} ${{ secrets.JOYRUN_CODE }} --with-gpx
 
       - name: Make svg GitHub profile
         if: env.RUN_TYPE != 'pass'
